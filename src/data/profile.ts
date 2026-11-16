@@ -11,6 +11,10 @@ export const profile = {
     "I lead teams of four to six developers, and I care about delivery that holds up under real users: sensible architecture, CI/CD, monitoring and clear ownership of production.",
     "Lately I have been building AI agents, RAG pipelines and MCP servers, and wiring them into real products.",
   ],
+  email: "usmanhafeez147@gmail.com",
+  phone: "+92 343 1854867",
+  phoneE164: "+923431854867",
+  whatsapp: "https://wa.me/923431854867",
   links: {
     github: "https://github.com/usmanhafeez147",
     linkedin: "https://www.linkedin.com/in/usmanhafeez147",

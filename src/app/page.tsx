@@ -162,7 +162,21 @@ export default function Home() {
             Send a short note on where things stand and what you need next, and I will
             reply with how I would approach it.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <a href={`mailto:${profile.email}`} className="card rounded-2xl border border-line bg-card p-6">
+              <p className="text-sm text-muted">Email</p>
+              <p className="mt-1 break-all font-semibold">{profile.email}</p>
+            </a>
+            <a href={`tel:${profile.phoneE164}`} className="card rounded-2xl border border-line bg-card p-6">
+              <p className="text-sm text-muted">Phone</p>
+              <p className="mt-1 font-semibold">{profile.phone}</p>
+            </a>
+            <a href={profile.whatsapp} rel="noreferrer" className="card rounded-2xl border border-line bg-card p-6">
+              <p className="text-sm text-muted">WhatsApp</p>
+              <p className="mt-1 font-semibold">{profile.phone}</p>
+            </a>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
             <a href={profile.links.linkedin} className={linkClass} rel="noreferrer">
               Message on LinkedIn
             </a>

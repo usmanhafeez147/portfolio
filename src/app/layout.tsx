@@ -83,6 +83,8 @@ const jsonLd = {
       alternateName: profile.handle,
       url: profile.siteUrl,
       jobTitle: profile.title,
+      email: `mailto:${profile.email}`,
+      telephone: profile.phoneE164,
       description,
       address: {
         "@type": "PostalAddress",
