@@ -51,7 +51,16 @@ body {
   color: transparent;
 }
 
-.hero-glow {
+body {
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 40rem;
+  z-index: -1;
+  pointer-events: none;
   background:
     radial-gradient(40rem 20rem at 15% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent),
     radial-gradient(36rem 18rem at 90% 10%, color-mix(in srgb, var(--accent-2) 16%, transparent), transparent);

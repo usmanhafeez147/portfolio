@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Header />
       <main id="top" className="mx-auto w-full max-w-5xl flex-1 px-6">
-        <section className="hero-glow relative -mx-6 px-6 py-20 sm:py-28">
+        <section className="py-20 sm:py-28">
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-4 py-1.5 text-sm text-muted">
             <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
             Open to freelance and remote roles
