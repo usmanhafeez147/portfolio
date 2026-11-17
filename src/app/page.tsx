@@ -6,6 +6,7 @@ import {
   experience,
   profile,
   projects,
+  publications,
   skillGroups,
   stats,
 } from "@/data/profile";
@@ -153,6 +154,26 @@ export default function Home() {
               <h3 className="mt-1 text-lg font-semibold">{education.degree}</h3>
               <p className="mt-3 text-muted">{education.school}</p>
             </div>
+          </div>
+        </Section>
+
+        <Section id="publications" eyebrow="Writing" title="Publications">
+          <div className="grid gap-6">
+            {publications.map((p) => (
+              <a
+                key={p.doi}
+                href={p.url}
+                rel="noreferrer"
+                className="card rounded-2xl border border-line bg-card p-6"
+              >
+                <p className="text-sm text-muted">
+                  {p.venue} · {p.date}
+                </p>
+                <h3 className="mt-1 text-lg font-semibold">{p.title}</h3>
+                <p className="mt-3 text-muted">{p.summary}</p>
+                <p className="mt-4 text-sm font-medium text-accent">DOI: {p.doi}</p>
+              </a>
+            ))}
           </div>
         </Section>
 

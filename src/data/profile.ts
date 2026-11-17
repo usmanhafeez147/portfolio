@@ -190,6 +190,19 @@ export const certifications = [
   },
 ];
 
+export const publications = [
+  {
+    title:
+      "The Revolution in AI: Reasoning, Retrieval and Agents as the Three Shifts Behind a New Generation of Systems",
+    venue: "Zenodo preprint",
+    date: "17 November 2026",
+    doi: "10.5281/zenodo.24298711",
+    url: "https://doi.org/10.5281/zenodo.24298711",
+    summary:
+      "An article on how reasoning models, retrieval augmented generation and agents combine in modern AI systems, with design guidance for engineers.",
+  },
+];
+
 export const education = {
   school: "Government College University, Faisalabad",
   degree: "Bachelor of Science in Information Technology",
