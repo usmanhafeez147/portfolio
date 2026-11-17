@@ -177,6 +177,12 @@ export const projects = [
 
 export const certifications = [
   {
+    name: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    issued: "November 2026",
+    url: "https://www.freecodecamp.org/certification/usmanhafeez147/responsive-web-design-v9",
+  },
+  {
     name: "Back End Development and APIs",
     issuer: "freeCodeCamp",
     issued: "November 2026",
