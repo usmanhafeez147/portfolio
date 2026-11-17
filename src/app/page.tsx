@@ -183,19 +183,23 @@ export default function Home() {
             Send a short note on where things stand and what you need next, and I will
             reply with how I would approach it.
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <a href={`mailto:${profile.email}`} className="card rounded-2xl border border-line bg-card p-6">
               <p className="text-sm text-muted">Email</p>
               <p className="mt-1 break-all font-semibold">{profile.email}</p>
             </a>
-            <a href={`tel:${profile.phoneE164}`} className="card rounded-2xl border border-line bg-card p-6">
-              <p className="text-sm text-muted">Phone</p>
+            <div className="card rounded-2xl border border-line bg-card p-6">
+              <p className="text-sm text-muted">Phone / WhatsApp</p>
               <p className="mt-1 font-semibold">{profile.phone}</p>
-            </a>
-            <a href={profile.whatsapp} rel="noreferrer" className="card rounded-2xl border border-line bg-card p-6">
-              <p className="text-sm text-muted">WhatsApp</p>
-              <p className="mt-1 font-semibold">{profile.phone}</p>
-            </a>
+              <div className="mt-3 flex gap-4 text-sm font-medium text-accent">
+                <a href={`tel:${profile.phoneE164}`} className="hover:underline">
+                  Call
+                </a>
+                <a href={profile.whatsapp} rel="noreferrer" className="hover:underline">
+                  WhatsApp
+                </a>
+              </div>
+            </div>
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href={profile.links.linkedin} className={linkClass} rel="noreferrer">
