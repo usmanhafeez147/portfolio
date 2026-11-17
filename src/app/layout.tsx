@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { profile } from "@/data/profile";
+import { education, profile } from "@/data/profile";
 import "./globals.css";
 
 const title = `${profile.name} | ${profile.title}`;
 const description =
-  "Usman Hafeez is a System Architect and Full-Stack Tech Lead with 9+ years of experience building SaaS platforms, cloud infrastructure on AWS and Kubernetes, and AI agent features with Node.js, Next.js, React and Python. Available for freelance and remote roles.";
+  "System Architect and Full-Stack Tech Lead with 9+ years building SaaS, AWS and Kubernetes platforms, and AI agents. Open to freelance and remote roles.";
+
+const longDescription =
+  "Usman Hafeez is a System Architect and Full-Stack Tech Lead with 9+ years of experience building SaaS platforms, cloud infrastructure on AWS and Kubernetes, and AI agent features with Node.js, Next.js, React and Python.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
@@ -63,6 +66,7 @@ export const metadata: Metadata = {
     description,
   },
   formatDetection: { email: false, address: false, telephone: false },
+  verification: { google: "hQZ4at7WEwriKIefuwGMhGl11Z4948QcM2btSM-bEjU" },
 };
 
 export const viewport: Viewport = {
@@ -85,13 +89,14 @@ const jsonLd = {
       jobTitle: profile.title,
       email: `mailto:${profile.email}`,
       telephone: profile.phoneE164,
-      description,
+      image: `${profile.siteUrl}/profile-photo.jpg`,
+      description: longDescription,
       address: {
         "@type": "PostalAddress",
         addressLocality: "Faisalabad",
         addressCountry: "PK",
       },
-      alumniOf: { "@type": "CollegeOrUniversity", name: "BS Information Technology" },
+      alumniOf: { "@type": "CollegeOrUniversity", name: education.school },
       knowsAbout: [
         "Full-stack development",
         "Next.js",
