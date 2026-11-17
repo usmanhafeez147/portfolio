@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Section, Tag } from "@/components/Section";
 import {
@@ -20,16 +21,35 @@ export default function Home() {
       <Header />
       <main id="top" className="mx-auto w-full max-w-5xl flex-1 px-6">
         <section className="py-20 sm:py-28">
-          <p className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-4 py-1.5 text-sm text-muted">
-            <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
-            Open to freelance and remote roles
+          <div className="flex flex-col-reverse gap-10 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-4 py-1.5 text-sm text-muted">
+                <span
+                  className="h-2 w-2 rounded-full bg-accent"
+                  aria-hidden="true"
+                />
+                Open to freelance and remote roles
+              </p>
+              <h1 className="mt-6 text-5xl font-semibold tracking-tight sm:text-7xl">
+                Hi, I am <span className="gradient-text">{profile.name}</span>
+              </h1>
+              <p className="mt-5 text-xl font-medium sm:text-2xl">
+                {profile.title}
+              </p>
+              <p className="mt-1 text-muted">{profile.location}</p>
+            </div>
+            <Image
+              src="/profile-photo.jpg"
+              alt={`Photo of ${profile.name}`}
+              width={400}
+              height={400}
+              priority
+              className="h-40 w-40 shrink-0 rounded-full border-2 border-line object-cover object-[45%_30%] shadow-lg sm:h-56 sm:w-56"
+            />
+          </div>
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-muted">
+            {profile.tagline}
           </p>
-          <h1 className="mt-6 text-5xl font-semibold tracking-tight sm:text-7xl">
-            Hi, I am <span className="gradient-text">{profile.name}</span>
-          </h1>
-          <p className="mt-5 text-xl font-medium sm:text-2xl">{profile.title}</p>
-          <p className="mt-1 text-muted">{profile.location}</p>
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-muted">{profile.tagline}</p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
               href="#contact"
@@ -40,16 +60,27 @@ export default function Home() {
             <a href="#projects" className={linkClass}>
               View projects
             </a>
-            <a href={profile.links.github} className={linkClass} rel="noreferrer">
+            <a
+              href={profile.links.github}
+              className={linkClass}
+              rel="noreferrer"
+            >
               GitHub
             </a>
-            <a href={profile.links.linkedin} className={linkClass} rel="noreferrer">
+            <a
+              href={profile.links.linkedin}
+              className={linkClass}
+              rel="noreferrer"
+            >
               LinkedIn
             </a>
           </div>
           <dl className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {stats.map((s) => (
-              <div key={s.label} className="rounded-2xl border border-line bg-card p-5">
+              <div
+                key={s.label}
+                className="rounded-2xl border border-line bg-card p-5"
+              >
                 <dt className="gradient-text text-3xl font-semibold tracking-tight">
                   {s.value}
                 </dt>
@@ -59,7 +90,11 @@ export default function Home() {
           </dl>
         </section>
 
-        <Section id="about" eyebrow="About" title="Building things that stay up">
+        <Section
+          id="about"
+          eyebrow="About"
+          title="Building things that stay up"
+        >
           <div className="max-w-3xl space-y-5 text-lg leading-8 text-muted">
             {profile.summary.map((p) => (
               <p key={p}>{p}</p>
@@ -70,7 +105,10 @@ export default function Home() {
         <Section id="skills" eyebrow="Skills" title="What I work with">
           <div className="grid gap-6 sm:grid-cols-2">
             {skillGroups.map((g) => (
-              <div key={g.name} className="card rounded-2xl border border-line bg-card p-6">
+              <div
+                key={g.name}
+                className="card rounded-2xl border border-line bg-card p-6"
+              >
                 <h3 className="font-semibold">{g.name}</h3>
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {g.items.map((item) => (
@@ -84,7 +122,11 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="experience" eyebrow="Experience" title="Where I have worked">
+        <Section
+          id="experience"
+          eyebrow="Experience"
+          title="Where I have worked"
+        >
           <ol className="space-y-10">
             {experience.map((job) => (
               <li
@@ -146,7 +188,9 @@ export default function Home() {
                 <p className="text-sm text-muted">{c.issuer}</p>
                 <h3 className="mt-1 text-lg font-semibold">{c.name}</h3>
                 <p className="mt-3 text-sm text-muted">Issued {c.issued}</p>
-                <p className="mt-4 text-sm font-medium text-accent">View certificate</p>
+                <p className="mt-4 text-sm font-medium text-accent">
+                  View certificate
+                </p>
               </a>
             ))}
             <div className="card rounded-2xl border border-line bg-card p-6">
@@ -171,7 +215,9 @@ export default function Home() {
                 </p>
                 <h3 className="mt-1 text-lg font-semibold">{p.title}</h3>
                 <p className="mt-3 text-muted">{p.summary}</p>
-                <p className="mt-4 text-sm font-medium text-accent">DOI: {p.doi}</p>
+                <p className="mt-4 text-sm font-medium text-accent">
+                  DOI: {p.doi}
+                </p>
               </a>
             ))}
           </div>
@@ -179,12 +225,15 @@ export default function Home() {
 
         <Section id="contact" eyebrow="Contact" title="Let's work together">
           <p className="max-w-2xl text-lg leading-8 text-muted">
-            I take on SaaS builds, codebase takeovers, cloud migrations and AI features.
-            Send a short note on where things stand and what you need next, and I will
-            reply with how I would approach it.
+            I take on SaaS builds, codebase takeovers, cloud migrations and AI
+            features. Send a short note on where things stand and what you need
+            next, and I will reply with how I would approach it.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <a href={`mailto:${profile.email}`} className="card rounded-2xl border border-line bg-card p-6">
+            <a
+              href={`mailto:${profile.email}`}
+              className="card rounded-2xl border border-line bg-card p-6"
+            >
               <p className="text-sm text-muted">Email</p>
               <p className="mt-1 break-all font-semibold">{profile.email}</p>
             </a>
@@ -192,26 +241,49 @@ export default function Home() {
               <p className="text-sm text-muted">Phone / WhatsApp</p>
               <p className="mt-1 font-semibold">{profile.phone}</p>
               <div className="mt-3 flex gap-4 text-sm font-medium text-accent">
-                <a href={`tel:${profile.phoneE164}`} className="hover:underline">
+                <a
+                  href={`tel:${profile.phoneE164}`}
+                  className="hover:underline"
+                >
                   Call
                 </a>
-                <a href={profile.whatsapp} rel="noreferrer" className="hover:underline">
+                <a
+                  href={profile.whatsapp}
+                  rel="noreferrer"
+                  className="hover:underline"
+                >
                   WhatsApp
                 </a>
               </div>
             </div>
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href={profile.links.linkedin} className={linkClass} rel="noreferrer">
+            <a
+              href={profile.links.linkedin}
+              className={linkClass}
+              rel="noreferrer"
+            >
               Message on LinkedIn
             </a>
-            <a href={profile.links.upwork} className={linkClass} rel="noreferrer">
+            <a
+              href={profile.links.upwork}
+              className={linkClass}
+              rel="noreferrer"
+            >
               Hire on Upwork
             </a>
-            <a href={profile.links.fiverr} className={linkClass} rel="noreferrer">
+            <a
+              href={profile.links.fiverr}
+              className={linkClass}
+              rel="noreferrer"
+            >
               Fiverr
             </a>
-            <a href={profile.links.github} className={linkClass} rel="noreferrer">
+            <a
+              href={profile.links.github}
+              className={linkClass}
+              rel="noreferrer"
+            >
               GitHub
             </a>
           </div>
