@@ -107,14 +107,25 @@ export const experience = [
   {
     role: "Senior Software Engineer and DevOps Engineer",
     company: "DevStrings",
-    period: "March 2020 to December 2024",
+    period: "March 2020 to March 2024",
     summary:
-      "Led full-stack and DevOps engineering for nearly five years across 10+ client systems on MERN, MEAN and Python.",
+      "Led full-stack and DevOps engineering for four years across 10+ client systems on MERN, MEAN and Python.",
     points: [
       "Built deployment pipelines and auto-scaling infrastructure that reduced manual release effort by about 60%.",
       "Tuned PostgreSQL and MongoDB queries to cut response times on high-load endpoints by about 40%.",
       "Added monitoring and alerting that halved mean time to resolution.",
       "Key work included the LockMesh device management platform and its encrypted messaging apps.",
+    ],
+  },
+  {
+    role: "Web Developer",
+    company: "Genius Mind Zone",
+    period: "February 2016 to September 2017",
+    summary:
+      "My first role, building PHP and Laravel applications from scratch for client projects.",
+    points: [
+      "Built admin panels, authentication, role-based access control and CRUD modules.",
+      "Integrated REST APIs and worked with MySQL and Git across client projects.",
     ],
   },
 ];
