@@ -7,7 +7,7 @@ export const profile = {
   tagline:
     "I architect and ship SaaS products that run in production, and I own both the code and the cloud platform underneath it.",
   summary: [
-    "I have spent more than nine years building full-stack products and the infrastructure they run on. At Teamcube I designed a multi-tenant, no-code website builder on AWS EKS that now deploys 100+ websites and cut time to launch by 70%.",
+    "I have spent more than nine years building full-stack products and the infrastructure they run on, from my first Laravel apps in 2016 to leading architecture for a multi-tenant SaaS platform on AWS EKS at Teamcube today.",
     "I lead teams of four to six developers, and I care about delivery that holds up under real users: sensible architecture, CI/CD, monitoring and clear ownership of production.",
     "Lately I have been building AI agents, RAG pipelines and MCP servers, and wiring them into real products.",
   ],
@@ -20,7 +20,9 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/usmanhafeez147",
     upwork: "https://www.upwork.com/freelancers/~01653fe16c02cc7163",
     fiverr: "https://www.fiverr.com/usmanhafeez447",
+    freecodecamp: "https://www.freecodecamp.org/usmanhafeez147",
   },
+  alternateNames: ["Usman Abdul Hafeez", "usmanhafeez147"],
 };
 
 export const stats = [
@@ -119,6 +121,28 @@ export const experience = [
   },
   {
     role: "Web Developer",
+    company: "Sunztech Intl",
+    period: "September 2018 to March 2020",
+    summary:
+      "Built web applications for client projects on the MERN, MEAN and PHP stacks.",
+    points: [
+      "Developed REST APIs and normalized database schemas for client systems.",
+      "Set up deployment pipelines and auto-scaling for production releases.",
+    ],
+  },
+  {
+    role: "Web Developer",
+    company: "Beaconites",
+    period: "October 2017 to September 2018",
+    summary:
+      "Built Laravel and Node.js web applications for multiple clients.",
+    points: [
+      "Implemented multi-auth guards, role-based access control and admin dashboards.",
+      "Integrated payment gateways and third-party APIs, with MySQL query optimisation.",
+    ],
+  },
+  {
+    role: "Web Developer",
     company: "Genius Mind Zone",
     period: "February 2016 to September 2017",
     summary:
@@ -140,7 +164,7 @@ export const projects = [
   {
     name: "Teamcube Website Builder",
     blurb:
-      "The multi-tenant, no-code website builder on AWS EKS that generates and deploys 100+ websites, with CI/CD on GitHub Actions and a 70% shorter time to launch.",
+      "A preset system that lets non-technical admins spin up category-specific websites (AI tools, e-commerce, SaaS) from templates, with each tenant built and rolled out automatically to Kubernetes through GitHub Actions.",
     tags: ["AWS EKS", "Next.js", "Vue", "PostgreSQL", "GitHub Actions"],
   },
   {

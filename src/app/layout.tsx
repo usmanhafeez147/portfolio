@@ -6,7 +6,7 @@ import "./globals.css";
 
 const title = `${profile.name} | ${profile.title}`;
 const description =
-  "System Architect and Full-Stack Tech Lead with 9+ years building SaaS, AWS and Kubernetes platforms, and AI agents. Open to freelance and remote roles.";
+  "System Architect and Full-Stack Tech Lead with 9+ years building SaaS, AWS and Kubernetes platforms, and AI agents. Open to full-time remote roles.";
 
 const longDescription =
   "Usman Hafeez is a System Architect and Full-Stack Tech Lead with 9+ years of experience building SaaS platforms, cloud infrastructure on AWS and Kubernetes, and AI agent features with Node.js, Next.js, React and Python.";
@@ -22,10 +22,11 @@ export const metadata: Metadata = {
   category: "technology",
   keywords: [
     "Usman Hafeez",
+    "Usman Abdul Hafeez",
     "System Architect",
     "Full-Stack Tech Lead",
     "Full-Stack Developer Pakistan",
-    "Freelance Full-Stack Developer",
+    "Remote Full-Stack Tech Lead",
     "Next.js developer",
     "Node.js developer",
     "React developer",
@@ -56,14 +57,14 @@ export const metadata: Metadata = {
     type: "website",
     url: profile.siteUrl,
     title,
-    description,
+    description: longDescription,
     siteName: `${profile.name} Portfolio`,
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title,
-    description,
+    description: longDescription,
   },
   formatDetection: { email: false, address: false, telephone: false },
   verification: { google: "hQZ4at7WEwriKIefuwGMhGl11Z4948QcM2btSM-bEjU" },
@@ -84,10 +85,17 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${profile.siteUrl}/#person`,
       name: profile.name,
-      alternateName: profile.handle,
+      alternateName: profile.alternateNames,
+      givenName: "Usman",
+      familyName: "Hafeez",
       url: profile.siteUrl,
       jobTitle: profile.title,
-      email: `mailto:${profile.email}`,
+      email: profile.email,
+      worksFor: {
+        "@type": "Organization",
+        name: "Teamcube",
+        url: "https://teamcube.io",
+      },
       telephone: profile.phoneE164,
       image: `${profile.siteUrl}/profile-photo.jpg`,
       description: longDescription,
@@ -112,6 +120,7 @@ const jsonLd = {
       sameAs: [
         profile.links.github,
         profile.links.linkedin,
+        profile.links.freecodecamp,
         profile.links.upwork,
         profile.links.fiverr,
       ],

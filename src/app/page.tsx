@@ -28,7 +28,7 @@ export default function Home() {
                   className="h-2 w-2 rounded-full bg-accent"
                   aria-hidden="true"
                 />
-                Open to freelance and remote roles
+                Open to full-time remote roles
               </p>
               <h1 className="mt-6 text-5xl font-semibold tracking-tight sm:text-7xl">
                 Hi, I am <span className="gradient-text">{profile.name}</span>
@@ -225,9 +225,9 @@ export default function Home() {
 
         <Section id="contact" eyebrow="Contact" title="Let's work together">
           <p className="max-w-2xl text-lg leading-8 text-muted">
-            I take on SaaS builds, codebase takeovers, cloud migrations and AI
-            features. Send a short note on where things stand and what you need
-            next, and I will reply with how I would approach it.
+            I am open to full-time remote roles as a tech lead or system
+            architect, and I can work UK hours. I also take on contract work for
+            SaaS builds, codebase takeovers, cloud migrations and AI features.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <a
@@ -266,25 +266,18 @@ export default function Home() {
               Message on LinkedIn
             </a>
             <a
-              href={profile.links.upwork}
-              className={linkClass}
-              rel="noreferrer"
-            >
-              Hire on Upwork
-            </a>
-            <a
-              href={profile.links.fiverr}
-              className={linkClass}
-              rel="noreferrer"
-            >
-              Fiverr
-            </a>
-            <a
               href={profile.links.github}
               className={linkClass}
               rel="noreferrer"
             >
               GitHub
+            </a>
+            <a
+              href={profile.links.upwork}
+              className={linkClass}
+              rel="noreferrer"
+            >
+              Upwork
             </a>
           </div>
         </Section>
