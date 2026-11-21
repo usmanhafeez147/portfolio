@@ -212,6 +212,12 @@ export const projects = [
 
 export const certifications = [
   {
+    name: "Front End Development Libraries",
+    issuer: "freeCodeCamp",
+    issued: "November 2026",
+    url: "https://www.freecodecamp.org/certification/usmanhafeez147/front-end-development-libraries-v9",
+  },
+  {
     name: "Responsive Web Design",
     issuer: "freeCodeCamp",
     issued: "November 2026",
