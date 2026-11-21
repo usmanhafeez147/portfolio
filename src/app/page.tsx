@@ -19,8 +19,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main id="top" className="mx-auto w-full max-w-5xl flex-1 px-6">
-        <section className="py-20 sm:py-28">
+      <main id="top" className="mx-auto w-full max-w-5xl flex-1 px-5 sm:px-6">
+        <section className="py-12 sm:py-28">
           <div className="flex flex-col-reverse gap-10 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-4 py-1.5 text-sm text-muted">
@@ -30,7 +30,7 @@ export default function Home() {
                 />
                 Open to full-time remote roles
               </p>
-              <h1 className="mt-6 text-5xl font-semibold tracking-tight sm:text-7xl">
+              <h1 className="mt-6 text-4xl font-semibold tracking-tight min-[400px]:text-5xl sm:text-7xl">
                 Hi, I am <span className="gradient-text">{profile.name}</span>
               </h1>
               <p className="mt-5 text-xl font-medium sm:text-2xl">
@@ -75,7 +75,7 @@ export default function Home() {
               LinkedIn
             </a>
           </div>
-          <dl className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <dl className="mt-12 grid grid-cols-2 gap-3 sm:mt-16 sm:grid-cols-4 sm:gap-4">
             {stats.map((s) => (
               <div
                 key={s.label}
@@ -283,7 +283,7 @@ export default function Home() {
         </Section>
       </main>
       <footer className="border-t border-line">
-        <div className="mx-auto max-w-5xl px-6 py-8 text-sm text-muted">
+        <div className="mx-auto max-w-5xl px-5 py-8 text-sm text-muted sm:px-6">
           {profile.name}. Built with Next.js and deployed on Vercel.
         </div>
       </footer>
