@@ -1,16 +1,18 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { profile } from "@/data/profile";
 
 const nav = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#certifications", label: "Certifications" },
-  { href: "#publications", label: "Writing" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#certifications", label: "Certifications" },
+  { href: "/#publications", label: "Writing" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -36,25 +38,25 @@ export function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-line bg-background/80 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3 sm:px-6 sm:py-4">
-        <a
-          href="#top"
+        <Link
+          href="/"
           className="font-semibold tracking-tight"
           onClick={() => setOpen(false)}
         >
           {profile.name}
-        </a>
+        </Link>
         <nav
           aria-label="Primary"
           className="hidden gap-6 text-sm text-muted md:flex"
         >
           {nav.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="hover:text-foreground"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <button
@@ -92,13 +94,13 @@ export function Header() {
         <ul className="mx-auto max-w-5xl px-5 py-2">
           {nav.map((item) => (
             <li key={item.href}>
-              <a
+              <Link
                 href={item.href}
                 className="block rounded-lg px-2 py-3 text-base text-muted hover:bg-card hover:text-foreground"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
