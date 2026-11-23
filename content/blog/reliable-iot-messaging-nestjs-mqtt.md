@@ -2,7 +2,7 @@
 
 Devices in the field do not behave like browsers. They lose power, drop off the network, reconnect with old data, and sometimes send the same message twice. If your backend assumes every message arrives once, in order, on time, it will slowly fill up with wrong data.
 
-I have built backends for connected devices on a few products, including Fribe, a NestJS and MongoDB platform that talks to devices over MQTT, and Saferide, where we built the APIs and infrastructure for vehicle tracking, including how new devices get provisioned. This post collects the patterns that made those systems reliable. It is less about any one product and more about the decisions that matter whenever you connect real hardware to a backend.
+I have built backends for connected devices on a few products, including a NestJS and MongoDB platform that talks to devices over MQTT, and Saferide, where we built the APIs and infrastructure for vehicle tracking, including how new devices get provisioned. This post collects the patterns that made those systems reliable. It is less about any one product and more about the decisions that matter whenever you connect real hardware to a backend.
 
 ## Why MQTT
 
@@ -44,7 +44,7 @@ Device timestamps matter just as much. Devices that were offline send their buff
 
 ## Transactions where money or state is involved
 
-On Fribe, some device messages trigger changes that must happen together or not at all, such as recording an event and updating a balance or a usage counter. If the process crashes halfway through, you end up with one change applied and the other missing.
+On the NestJS platform, some device messages trigger changes that must happen together or not at all, such as recording an event and updating a balance or a usage counter. If the process crashes halfway through, you end up with one change applied and the other missing.
 
 For those cases we used MongoDB multi-document transactions, wrapped in a NestJS service so the rest of the code did not have to think about them. The duplicate check, the event record and the related updates all happen inside one transaction. Either everything is written, or nothing is, and the message can be safely retried.
 
