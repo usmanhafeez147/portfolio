@@ -121,7 +121,14 @@ const jsonLd = {
         url: "https://teamcube.io",
       },
       telephone: profile.phoneE164,
-      image: `${profile.siteUrl}/profile-photo.jpg`,
+      image: {
+        "@type": "ImageObject",
+        url: `${profile.siteUrl}/usman-hafeez.jpg`,
+        contentUrl: `${profile.siteUrl}/usman-hafeez.jpg`,
+        width: 400,
+        height: 400,
+        caption: "Usman Hafeez (Usman Abdul Hafeez), System Architect and Full-Stack Tech Lead",
+      },
       description: longDescription,
       address: {
         "@type": "PostalAddress",

@@ -39,7 +39,7 @@ export default function Home() {
               <p className="mt-1 text-muted">{profile.location}</p>
             </div>
             <Image
-              src="/profile-photo.jpg"
+              src="/usman-hafeez.jpg"
               alt={`${profile.name}, ${profile.title}`}
               width={400}
               height={400}

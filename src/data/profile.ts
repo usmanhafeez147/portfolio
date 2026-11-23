@@ -7,6 +7,7 @@ export const profile = {
   tagline:
     "I architect and ship SaaS products that run in production, and I own both the code and the cloud platform underneath it.",
   summary: [
+    "I am Usman Abdul Hafeez, known online as Usman Hafeez (usmanhafeez147), a System Architect and Full-Stack Tech Lead based in Faisalabad, Pakistan.",
     "I have spent more than nine years building full-stack products and the infrastructure they run on, from my first Laravel apps in 2016 to leading architecture for a multi-tenant SaaS platform on AWS EKS at Teamcube today.",
     "I lead teams of four to six developers, and I care about delivery that holds up under real users: sensible architecture, CI/CD, monitoring and clear ownership of production.",
     "Lately I have been building AI agents, RAG pipelines and MCP servers, and wiring them into real products.",
