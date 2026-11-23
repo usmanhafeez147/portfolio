@@ -40,7 +40,7 @@ export default function Home() {
             </div>
             <Image
               src="/profile-photo.jpg"
-              alt={`Photo of ${profile.name}`}
+              alt={`${profile.name}, ${profile.title}`}
               width={400}
               height={400}
               priority
@@ -93,7 +93,7 @@ export default function Home() {
         <Section
           id="about"
           eyebrow="About"
-          title="Building things that stay up"
+          title="Full-stack architecture that stays up"
         >
           <div className="max-w-3xl space-y-5 text-lg leading-8 text-muted">
             {profile.summary.map((p) => (
@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="skills" eyebrow="Skills" title="What I work with">
+        <Section id="skills" eyebrow="Skills" title="Full-stack, cloud and AI skills">
           <div className="grid gap-6 sm:grid-cols-2">
             {skillGroups.map((g) => (
               <div
@@ -125,7 +125,7 @@ export default function Home() {
         <Section
           id="experience"
           eyebrow="Experience"
-          title="Where I have worked"
+          title="Full-stack and DevOps experience"
         >
           <ol className="space-y-10">
             {experience.map((job) => (
@@ -151,7 +151,7 @@ export default function Home() {
           </ol>
         </Section>
 
-        <Section id="projects" eyebrow="Projects" title="Selected work">
+        <Section id="projects" eyebrow="Projects" title="SaaS, IoT and AI projects">
           <div className="grid gap-6 sm:grid-cols-2">
             {projects.map((p) => (
               <article
@@ -175,7 +175,7 @@ export default function Home() {
         <Section
           id="certifications"
           eyebrow="Certifications"
-          title="Credentials and education"
+          title="Certifications and education"
         >
           <div className="grid gap-6 sm:grid-cols-2">
             {certifications.map((c) => (
@@ -223,7 +223,7 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="contact" eyebrow="Contact" title="Let's work together">
+        <Section id="contact" eyebrow="Contact" title="Hire me for remote or freelance work">
           <p className="max-w-2xl text-lg leading-8 text-muted">
             I am open to full-time remote roles as a tech lead or system
             architect, and I can work UK hours. I also take on contract work for

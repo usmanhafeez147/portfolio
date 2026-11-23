@@ -18,6 +18,7 @@ export const profile = {
   links: {
     github: "https://github.com/usmanhafeez147",
     linkedin: "https://www.linkedin.com/in/usmanhafeez147",
+    stackoverflow: "https://stackoverflow.com/users/6328618/usman-hafeez",
     upwork: "https://www.upwork.com/freelancers/~01653fe16c02cc7163",
     fiverr: "https://www.fiverr.com/usmanhafeez447",
     freecodecamp: "https://www.freecodecamp.org/usmanhafeez147",

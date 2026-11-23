@@ -1,15 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { education, profile } from "@/data/profile";
+import { certifications, education, profile } from "@/data/profile";
 import "./globals.css";
 
 const title = `${profile.name} | ${profile.title}`;
 const description =
-  "System Architect and Full-Stack Tech Lead with 9+ years building SaaS, AWS and Kubernetes platforms, and AI agents. Open to full-time remote roles.";
+  "Hire Usman Hafeez, System Architect and Full-Stack Tech Lead: 9+ years in Next.js, Node.js, Python, AWS, Kubernetes and AI agents. Remote and freelance.";
 
 const longDescription =
-  "Usman Hafeez is a System Architect and Full-Stack Tech Lead with 9+ years of experience building SaaS platforms, cloud infrastructure on AWS and Kubernetes, and AI agent features with Node.js, Next.js, React and Python.";
+  "Usman Hafeez is a System Architect and Full-Stack Tech Lead with 9+ years of experience building multi-tenant SaaS platforms, cloud infrastructure on AWS EKS and Kubernetes, and AI agents and RAG pipelines with Node.js, NestJS, Next.js, React, Python, LangChain and LangGraph.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
@@ -23,23 +23,47 @@ export const metadata: Metadata = {
   keywords: [
     "Usman Hafeez",
     "Usman Abdul Hafeez",
+    "usmanhafeez147",
     "System Architect",
     "Full-Stack Tech Lead",
+    "Full-Stack Developer",
+    "Senior Full-Stack Engineer",
     "Full-Stack Developer Pakistan",
-    "Remote Full-Stack Tech Lead",
+    "Remote Full-Stack Developer",
+    "Hire Full-Stack Developer",
+    "Freelance Full-Stack Developer",
     "Next.js developer",
     "Node.js developer",
+    "NestJS developer",
     "React developer",
-    "NestJS",
-    "Python",
+    "TypeScript developer",
+    "Python developer",
+    "FastAPI",
+    "MERN stack",
+    "MongoDB",
+    "MySQL",
+    "Redis",
     "AWS architect",
+    "AWS EKS",
     "Kubernetes",
+    "Docker",
     "Terraform",
+    "CI/CD",
     "DevOps engineer",
+    "Cloud architect",
+    "Multi-tenant SaaS",
     "SaaS development",
+    "Microservices architecture",
+    "AI engineer",
     "AI agents",
     "RAG",
+    "LangChain",
+    "LangGraph",
+    "MCP server",
+    "n8n automation",
+    "MQTT and IoT",
     "Faisalabad",
+    "Pakistan",
   ],
   alternates: { canonical: "/" },
   robots: {
@@ -107,19 +131,51 @@ const jsonLd = {
       alumniOf: { "@type": "CollegeOrUniversity", name: education.school },
       knowsAbout: [
         "Full-stack development",
+        "System architecture",
+        "Multi-tenant SaaS architecture",
+        "Microservices",
+        "TypeScript",
         "Next.js",
+        "React",
+        "Vue.js",
         "Node.js",
+        "NestJS",
+        "Express",
+        "Python",
+        "FastAPI",
+        "Laravel",
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "Redis",
         "AWS",
+        "Amazon EKS",
+        "Google Cloud Platform",
         "Kubernetes",
+        "Docker",
         "Terraform",
+        "CI/CD",
         "DevOps",
+        "MQTT",
+        "Internet of Things",
         "AI agents",
         "Retrieval-augmented generation",
-        "SaaS architecture",
+        "LangChain",
+        "LangGraph",
+        "Model Context Protocol",
+        "n8n",
       ],
+      hasCredential: certifications.map((c) => ({
+        "@type": "EducationalOccupationalCredential",
+        name: `${c.issuer} ${c.name} Certification`,
+        credentialCategory: "certificate",
+        url: c.url,
+        recognizedBy: { "@type": "Organization", name: c.issuer },
+      })),
       sameAs: [
         profile.links.github,
         profile.links.linkedin,
+        profile.links.stackoverflow,
         profile.links.freecodecamp,
         profile.links.upwork,
         profile.links.fiverr,
