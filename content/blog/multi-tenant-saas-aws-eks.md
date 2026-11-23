@@ -1,6 +1,6 @@
 # How We Serve 100+ Client Websites from One Multi-Tenant SaaS on AWS EKS
 
-At Teamcube we build a no-code website builder. A customer picks a template, edits pages in the builder, and publishes. A few minutes later the site is live on its own subdomain or on the customer's own domain, with HTTPS.
+At work we build a no-code website builder. A customer picks a template, edits pages in the builder, and publishes. A few minutes later the site is live on its own subdomain or on the customer's own domain, with HTTPS.
 
 Today the platform serves more than 100 live websites, and launching a new one takes about 70% less time than it did when every site was its own deployment. We did not get there by adding more servers. We got there by deciding early that a website is a row in a database, not a deployment.
 
