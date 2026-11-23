@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
   const url = `/blog/${post.slug}`;
   return {
-    title: post.title,
+    title: { absolute: post.seoTitle },
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical: url },

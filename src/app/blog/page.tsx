@@ -5,8 +5,8 @@ import { posts } from "@/data/posts";
 import { profile } from "@/data/profile";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: `Articles by ${profile.name} on SaaS architecture, AWS, Kubernetes, full-stack development and AI agents.`,
+  title: { absolute: "Engineering Blog on SaaS, AWS and AI | Usman Hafeez" },
+  description: `Articles by ${profile.name} on multi-tenant SaaS architecture, AWS and Kubernetes, real-time systems, IoT backends and AI agents with MCP.`,
   alternates: { canonical: "/blog" },
 };
 
@@ -30,9 +30,22 @@ export default function BlogIndex() {
         <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
           Notes on SaaS, cloud and AI engineering
         </h1>
-        <p className="mt-4 text-lg leading-8 text-muted">
-          What I have learned building and running production systems.
-        </p>
+        <div className="mt-4 space-y-4 text-lg leading-8 text-muted">
+          <p>
+            I am Usman Hafeez (Usman Abdul Hafeez), a System Architect and
+            Full-Stack Tech Lead with more than nine years of experience
+            building and running production systems. This blog is where I
+            write down what I have learned along the way.
+          </p>
+          <p>
+            The articles come from real projects: multi-tenant SaaS platforms
+            on AWS EKS and Kubernetes, real-time tracking with Node.js,
+            Socket.IO and Redis, device backends with NestJS and MQTT, and AI
+            assistants that work with live data through MCP servers. Each one
+            explains the architecture decisions, the problems we ran into and
+            what I would do differently, in plain language rather than code.
+          </p>
+        </div>
         <ul className="mt-10 space-y-6">
           {posts.map((post) => (
             <li
