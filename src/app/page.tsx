@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Header } from "@/components/Header";
+import { posts } from "@/data/posts";
 import { Section, Tag } from "@/components/Section";
 import {
   certifications,
@@ -221,6 +223,33 @@ export default function Home() {
               </a>
             ))}
           </div>
+        </Section>
+
+        <Section id="articles" eyebrow="Blog" title="Latest articles">
+          <div className="grid gap-6">
+            {posts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="card rounded-2xl border border-line bg-card p-6"
+              >
+                <time dateTime={post.published} className="text-sm text-muted">
+                  {new Date(`${post.published}T00:00:00Z`).toLocaleDateString(
+                    "en-GB",
+                    { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" },
+                  )}
+                </time>
+                <h3 className="mt-1 text-lg font-semibold">{post.title}</h3>
+                <p className="mt-3 text-muted">{post.description}</p>
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="/blog"
+            className="mt-6 inline-block text-sm font-medium text-accent"
+          >
+            All articles →
+          </Link>
         </Section>
 
         <Section id="contact" eyebrow="Contact" title="Hire me for remote or freelance work">
