@@ -9,6 +9,62 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "guardrails-for-ai-coding-agents",
+    title:
+      "Guardrails for AI Coding Agents: Running Several Agents Safely on One Repo",
+    seoTitle: "Guardrails for AI Coding Agents | Usman Hafeez",
+    description:
+      "Practical guardrails for AI coding agents: one worktree per agent, sandboxes, scoped tokens, prompt injection defenses and CI-based verification.",
+    published: "2026-11-27",
+    keywords: [
+      "AI coding agents",
+      "agent guardrails",
+      "parallel coding agents",
+      "git worktrees",
+      "prompt injection",
+      "sandboxing",
+      "least privilege",
+      "CI verification",
+    ],
+  },
+  {
+    slug: "tracing-ai-agents-opentelemetry-genai",
+    title:
+      "Tracing AI Agents with OpenTelemetry: What the GenAI Conventions Actually Say in 2026",
+    seoTitle: "Tracing AI Agents with OpenTelemetry GenAI | Usman Hafeez",
+    description:
+      "Where OpenTelemetry's GenAI conventions stand in 2026, the agent and tool spans that matter, opt-in content capture and how to instrument an agent.",
+    published: "2026-11-27",
+    keywords: [
+      "OpenTelemetry",
+      "GenAI semantic conventions",
+      "AI agent observability",
+      "LLM tracing",
+      "invoke_agent",
+      "execute_tool",
+      "LangGraph",
+      "Python",
+    ],
+  },
+  {
+    slug: "nextjs-16-cache-components-partial-prefetching",
+    title: "Next.js 16 Cache Components and Partial Prefetching in Practice",
+    seoTitle: "Next.js 16 Cache Components in Practice | Usman Hafeez",
+    description:
+      "How Next.js 16.4 Cache Components work: use cache, cacheLife, revalidateTag vs updateTag, Partial Prefetching, navigation() and ensureStatic.",
+    published: "2026-11-27",
+    keywords: [
+      "Next.js 16",
+      "Cache Components",
+      "use cache",
+      "Partial Prefetching",
+      "revalidateTag",
+      "updateTag",
+      "ensureStatic",
+      "proxy.ts",
+    ],
+  },
+  {
     slug: "mcp-server-ai-assistant-fleet-data",
     title:
       "Letting an AI Assistant Query Live Fleet Data Safely with an MCP Server",
