@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
+import { caseStudyForProject } from "@/data/caseStudies";
 import { posts } from "@/data/posts";
 import { Section, Tag } from "@/components/Section";
 import {
@@ -169,6 +170,14 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                {caseStudyForProject(p.name) && (
+                  <Link
+                    href={`/projects/${caseStudyForProject(p.name)!.slug}`}
+                    className="mt-5 self-start text-sm font-medium text-accent hover:underline"
+                  >
+                    Read the case study →
+                  </Link>
+                )}
               </article>
             ))}
           </div>

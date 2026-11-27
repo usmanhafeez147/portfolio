@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { caseStudies } from "@/data/caseStudies";
 import { posts } from "@/data/posts";
 import { profile } from "@/data/profile";
 
 // Update this when the homepage content changes, so lastmod stays truthful.
-const SITE_UPDATED = "2026-11-26";
+const SITE_UPDATED = "2026-11-27";
 
 const latestPost = posts
   .map((post) => post.published)
@@ -26,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    ...caseStudies.map((study) => ({
+      url: `${profile.siteUrl}/projects/${study.slug}`,
+      lastModified: new Date(`${study.published}T00:00:00Z`),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     ...posts.map((post) => ({
       url: `${profile.siteUrl}/blog/${post.slug}`,
       lastModified: new Date(`${post.published}T00:00:00Z`),
