@@ -1,0 +1,34 @@
+name: IndexNow
+
+# After a push to main, wait for Vercel's production deploy to go live,
+# then submit every sitemap URL to IndexNow (Bing and other engines).
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "src/**"
+      - "public/**"
+  workflow_dispatch:
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Wait for Vercel production deploy
+        if: github.event_name == 'push'
+        run: sleep 180
+
+      - name: Submit sitemap URLs to IndexNow
+        run: node scripts/indexnow.mjs
